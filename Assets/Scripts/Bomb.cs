@@ -5,6 +5,9 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public GameObject particleSystem;
+
+    bool collided = false;
+
     void Start()
     {
         
@@ -18,8 +21,10 @@ public class Bomb : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Line")
+        if(collision.gameObject.tag == "Line" && !collided)
         {
+            collided = true;
+            GameManager.instance.Updatelives();
             Destroy(gameObject);
             GameObject p = Instantiate(particleSystem, new Vector3(transform.position.x,transform.position.y,-5f), particleSystem.transform.rotation) as GameObject;
             Destroy(p, 3f);

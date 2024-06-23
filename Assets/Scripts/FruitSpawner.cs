@@ -7,9 +7,12 @@ public class FruitSpawner : MonoBehaviour
     public GameObject fruit;
     public GameObject bomb;
     public float maxXPos;
+
+    public static FruitSpawner instance;
     void Start()
     {
-        
+        if (instance == null)
+            instance = this;
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class FruitSpawner : MonoBehaviour
     public void StartGame()
     {
         Invoke("StartSpawning", 1f);
+        
     }
     public void StartSpawning()
     {
@@ -37,8 +41,8 @@ public class FruitSpawner : MonoBehaviour
     {
         StartCoroutine("SpawnFruit");
 
-        int rnd = Random.Range(1,6);
-        if (rnd > 3)
+        int rnd = Random.Range(1,10);
+        if (rnd > 4)
             SpawnBomb();
     }
     IEnumerator SpawnFruit()
@@ -66,5 +70,7 @@ public class FruitSpawner : MonoBehaviour
 
         b.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 12f), ForceMode2D.Impulse);
         b.GetComponent<Rigidbody2D>().AddTorque(Random.Range(-50f, 50f));
+
+        Destroy(b, 5f);
     }
 }

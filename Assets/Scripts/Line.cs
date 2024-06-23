@@ -19,7 +19,7 @@ public class Line : MonoBehaviour
 
     void Update()
     {
-        if(Application.platform == RuntimePlatform.Android)
+        if(Application.platform == RuntimePlatform.Android && GameManager.instance.gameOver == false)
         {
             if(Input.touchCount>0)
             {
@@ -52,7 +52,7 @@ public class Line : MonoBehaviour
 
         else
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && GameManager.instance.gameOver == false)
                 mouseDown = true;
 
             if (mouseDown)
