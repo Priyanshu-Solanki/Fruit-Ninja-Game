@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 686718370637375944}
   - component: {fileID: 9064037806164531084}
   - component: {fileID: 8970859493761017435}
-  m_Layer: 0
+  - component: {fileID: 6550600265630384249}
+  m_Layer: 7
   m_Name: Fruit_Sprite
   m_TagString: Fruit
   m_Icon: {fileID: 0}
@@ -148,3 +149,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6550600265630384249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4507748968147639486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 211164b26df954b46bea4d31466655ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cut1: {fileID: 8231198580526332125, guid: fe9aa1a7b19a48f4cbb31fd6fdf7f364, type: 3}
+  cut2: {fileID: 4947640812436507927, guid: df01f4dab665e1145ae7f264e4741a22, type: 3}

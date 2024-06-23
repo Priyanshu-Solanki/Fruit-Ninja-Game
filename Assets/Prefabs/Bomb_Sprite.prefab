@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2260779977067744122}
   - component: {fileID: 7116913833299559293}
   - component: {fileID: 4052181688979999504}
-  m_Layer: 0
+  - component: {fileID: 338079581025495469}
+  m_Layer: 7
   m_Name: Bomb_Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &338079581025495469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345572744095269409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc8fe3341a93a2647ba5a205d0ad002c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleSystem: {fileID: 361128184376728196, guid: 0f19e86cf7990fe428d515f48e0a15b2, type: 3}
